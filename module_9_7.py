@@ -2,7 +2,7 @@ def is_prime(func):
     def wrapper(*args, **kwargs):
         func_result = func(*args, **kwargs)
         prime = True
-        for i in range(2, func(*args, **kwargs)):
+        for i in range(2, int(func(*args, **kwargs) / 2)):
             if func(*args, **kwargs) % i == 0:
                 prime = False
                 break
